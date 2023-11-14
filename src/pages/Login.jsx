@@ -48,7 +48,7 @@ export const Login = () => {
           <fieldset className="mb-4">
             <label htmlFor="inputUsername"> Username </label>
             <input
-              type="email"
+              type="text"
               id="inputUsername"
               value={username}
               onChange={(evt) => setUsername(evt.target.value)}
