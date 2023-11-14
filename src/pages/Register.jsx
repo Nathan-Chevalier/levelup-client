@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export const Register = () => {
-  const [email, setEmail] = useState("admina@straytor.com");
+  const [username, setUsername] = useState("admina@straytor.com");
   const [password, setPassword] = useState("straytor");
   const [firstName, setFirstName] = useState("Admina");
   const [lastName, setLastName] = useState("Straytor");
@@ -15,7 +15,7 @@ export const Register = () => {
     fetch(`http://localhost:8000/register`, {
       method: "POST",
       body: JSON.stringify({
-        email,
+        username,
         password,
         first_name: firstName,
         last_name: lastName,
@@ -78,14 +78,14 @@ export const Register = () => {
             />
           </fieldset>
           <fieldset className="mb-4">
-            <label htmlFor="inputEmail"> Email address </label>
+            <label htmlFor="inputUsername"> Username </label>
             <input
-              type="email"
-              id="inputEmail"
-              value={email}
-              onChange={(evt) => setEmail(evt.target.value)}
+              type="text"
+              id="inputUsername"
+              value={username}
+              onChange={(evt) => setUsername(evt.target.value)}
               className="form-control"
-              placeholder="Email address"
+              placeholder="Username"
               required
               autoFocus
             />
